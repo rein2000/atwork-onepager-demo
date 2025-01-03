@@ -77,12 +77,6 @@ main section{
   padding-top: 100px;
 }
 
-footer.footer{
-  min-height: 30vh;
-  background-color: #222;
-  color: white;
-}
-
 .bg-red{
   background-color: red;
 }
@@ -194,6 +188,40 @@ body.mobile-menu-active{
   text-decoration: none;
 }
 
+.grid{
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin: 0 -20px;
+}
+
+.grid .col-4{
+  width: 33.33333%;
+  padding: 20px;
+}
+
+.grid .col-6{
+  width: 50%;
+  padding: 20px;
+}
+
+footer.footer{
+  background-color: #222;
+  color: white;
+  padding: 20px;
+}
+
+.footer-grid{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-grid .copyright{
+  text-align: right;
+}
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
@@ -248,7 +276,11 @@ body.mobile-menu-active{
   /* Style adjustments for viewports that meet the condition */
 
   .sticky-header {
-    padding: 0 20px;
+    padding: 0;
+  }
+
+  .sticky-header .logo{
+    margin-left: 20px;
   }
 
   .sticky-header ul.nav{
