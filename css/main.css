@@ -50,7 +50,41 @@ h1{
 	font-family: "Alfa Slab One", serif;
 	font-weight: 400;
 	font-style: normal;
-	font-size: 7em;	
+	font-size: 7.2em;	
+}
+
+h2{
+	font-family: "Alfa Slab One", serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 4.8em;	
+}
+
+main section{
+  min-height: 90vh;
+}
+
+main section{
+  min-height: 90vh;
+}
+
+footer.footer{
+  min-height: 30vh;
+  background-color: #222;
+  color: white;
+}
+
+.bg-red{
+  background-color: red;
+}
+.bg-yellow{
+  background-color: yellow;
+}
+.bg-black{
+  background-color: black;
+}
+.bg-blue{
+  background-color: blue;
 }
 
 /* ==========================================================================
