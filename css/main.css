@@ -56,7 +56,7 @@ h1{
 	font-style: normal;
 	font-size: 7.2em;	
   line-height: 1.2;
-  margin-bottom: 1em;
+  margin-bottom: .5em;
 }
 
 h2{
@@ -65,7 +65,7 @@ h2{
 	font-style: normal;
 	font-size: 4.8em;	
   line-height: 1.2;
-  margin-bottom: 1em;
+  margin-bottom: .5em;
 }
 
 main section{
@@ -96,7 +96,7 @@ footer.footer{
   background-color: blue;
 }
 
-.sticky-menu{
+.sticky-header{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -108,21 +108,90 @@ footer.footer{
   position: sticky;
   top: 0;
   left: 0;
-  padding: 0 20px;
+  padding: 20px;
 }
 
-.sticky-menu ul.nav{
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
+.sticky-header ul.nav{
+  display: none;
   list-style: none;
 }
 
-.sticky-menu ul.nav a{
+.sticky-header ul.nav a{
   display: inline-block;
   padding: 20px;
   color: white;
+}
+
+.sticky-header ul.nav a:hover{
+  text-decoration: none;
+}
+
+.hamburger{
+  height: 20px;
+  width: auto;
+  cursor: pointer;
+}
+
+body.mobile-menu-active{
+  background-color: red;
+}
+
+.mobile-menu {
+  display: block;
+  width: 100%;
+  min-height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: red;
+ 
+}
+.mobile-menu .close{
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  height: 24px;
+  width: auto;
+  cursor: pointer;
+}
+
+.mobile-menu{
+  display: none;
+}
+
+.mobile-menu-active .mobile-menu{
+  display: block;
+}
+
+.mobile-menu-active .mobile-menu nav{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+.mobile-menu nav li{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.mobile-menu nav li a{
+  color: white;
+  text-align: center;
+  display: inline-block;
+  text-transform: uppercase;
+	font-family: "Alfa Slab One", serif;
+	font-weight: 400;
+	font-style: normal;
+  font-size: 2em;
+  line-height: 1.5;
+  margin-bottom: .5em;
+  text-decoration: none;
 }
 
 /* ==========================================================================
@@ -171,86 +240,30 @@ footer.footer{
 }
 
 /* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
+   Media Queries 
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
+@media only screen and (min-width: 900px) {
+
   /* Style adjustments for viewports that meet the condition */
+
+  .sticky-header {
+    padding: 0 20px;
+  }
+
+  .sticky-header ul.nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .hamburger{
+    display: none;
+  }
+
+  .mobile-menu-active .mobile-menu{
+    display: none;
+  }
+
 }
-
-@media print,
-  (-webkit-min-device-pixel-ratio: 1.25),
-  (min-resolution: 1.25dppx),
-  (min-resolution: 120dpi) {
-  /* Style adjustments for high resolution devices */
-}
-
-/* ==========================================================================
-   Print styles.
-   Inlined to avoid the additional HTTP request:
-   https://www.phpied.com/delay-loading-your-print-css/
-   ========================================================================== */
-
-@media print {
-  *,
-  *::before,
-  *::after {
-    background: #fff !important;
-    color: #000 !important;
-    /* Black prints faster */
-    box-shadow: none !important;
-    text-shadow: none !important;
-  }
-
-  a,
-  a:visited {
-    text-decoration: underline;
-  }
-
-  a[href]::after {
-    content: " (" attr(href) ")";
-  }
-
-  abbr[title]::after {
-    content: " (" attr(title) ")";
-  }
-
-  /*
-   * Don't show links that are fragment identifiers,
-   * or use the `javascript:` pseudo protocol
-   */
-  a[href^="#"]::after,
-  a[href^="javascript:"]::after {
-    content: "";
-  }
-
-  pre {
-    white-space: pre-wrap !important;
-  }
-
-  pre,
-  blockquote {
-    border: 1px solid #999;
-    page-break-inside: avoid;
-  }
-
-  tr,
-  img {
-    page-break-inside: avoid;
-  }
-
-  p,
-  h2,
-  h3 {
-    orphans: 3;
-    widows: 3;
-  }
-
-  h2,
-  h3 {
-    page-break-after: avoid;
-  }
-}
-
