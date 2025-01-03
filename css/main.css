@@ -188,23 +188,6 @@ body.mobile-menu-active{
   text-decoration: none;
 }
 
-.grid{
-  display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  margin: 0 -20px;
-}
-
-.grid .col-4{
-  width: 33.33333%;
-  padding: 20px;
-}
-
-.grid .col-6{
-  width: 50%;
-  padding: 20px;
-}
-
 footer.footer{
   background-color: #222;
   color: white;
@@ -270,6 +253,27 @@ footer.footer{
 /* ==========================================================================
    Media Queries 
    ========================================================================== */
+
+@media only screen and (min-width: 720px) {
+
+  .grid{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin: 0 -20px;
+  }
+  
+  .grid .col-4{
+    width: 33.33333%;
+    padding: 20px;
+  }
+  
+  .grid .col-6{
+    width: 50%;
+    padding: 20px;
+  }
+
+}
 
 @media only screen and (min-width: 900px) {
 
