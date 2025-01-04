@@ -130,10 +130,6 @@ main section {
   width: auto;
 }
 
-body.mobile-menu-active {
-  background-color: red;
-}
-
 .mobile-menu {
   display: block;
   width: 100%;
@@ -166,7 +162,7 @@ body.mobile-menu-active {
   display: block;
 }
 
-.mobile-menu-active .mobile-menu nav {
+.mobile-menu nav {
   display: flex;
   justify-content: center;
   align-items: center;
