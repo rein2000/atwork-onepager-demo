@@ -37,20 +37,14 @@ video {
 }
 
 /* ==========================================================================
-   Author's custom styles
+   Your custom styles
    ========================================================================== */
 
 :root {
   scroll-behavior: smooth;
 }   
 
-.alfa-slab-one-regular {
-  font-family: "Alfa Slab One", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-h1{
+h1 {
 	font-family: "Alfa Slab One", serif;
 	font-weight: 400;
 	font-style: normal;
@@ -59,7 +53,7 @@ h1{
   margin-bottom: .5em;
 }
 
-h2{
+h2 {
 	font-family: "Alfa Slab One", serif;
 	font-weight: 400;
 	font-style: normal;
@@ -68,29 +62,34 @@ h2{
   margin-bottom: .5em;
 }
 
-main section{
-  min-height: 90vh;
+.hero h2 {
+	font-family: serif;
+	font-weight: 700;
+	font-style: normal;
+	font-size: 1.8em;	
+  line-height: 1.2;
+  margin-bottom: .5em;  
 }
 
-main section{
+main section {
   min-height: 90vh;
   padding-top: 100px;
 }
 
-.bg-red{
+.bg-red {
   background-color: red;
 }
-.bg-yellow{
+.bg-yellow {
   background-color: yellow;
 }
-.bg-black{
+.bg-black {
   background-color: black;
 }
-.bg-blue{
+.bg-blue {
   background-color: blue;
 }
 
-.sticky-header{
+.sticky-header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -105,28 +104,33 @@ main section{
   padding: 20px;
 }
 
-.sticky-header ul.nav{
+.sticky-header ul.nav {
   display: none;
   list-style: none;
 }
 
-.sticky-header ul.nav a{
+.sticky-header ul.nav a {
   display: inline-block;
   padding: 20px;
   color: white;
 }
 
-.sticky-header ul.nav a:hover{
+.sticky-header ul.nav a:hover {
   text-decoration: none;
 }
 
-.hamburger{
-  height: 20px;
-  width: auto;
+.hamburger {
+  border: none;
+  background: none;
   cursor: pointer;
 }
 
-body.mobile-menu-active{
+.hamburger img {
+  height: 20px;
+  width: auto;
+}
+
+body.mobile-menu-active {
   background-color: red;
 }
 
@@ -137,27 +141,32 @@ body.mobile-menu-active{
   position: fixed;
   top: 0;
   left: 0;
-  background: red;
- 
-}
-.mobile-menu .close{
-  position: absolute;
-  right: 20px;
-  top: 20px;
-  height: 24px;
-  width: auto;
-  cursor: pointer;
+  background: red; 
 }
 
-.mobile-menu{
+.mobile-menu .close {
+  position: absolute;
+  right: 22px;
+  top: 22px;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.mobile-menu .close img {
+  height: 24px;
+  width: auto;
+}
+
+.mobile-menu {
   display: none;
 }
 
-.mobile-menu-active .mobile-menu{
+.mobile-menu-active .mobile-menu {
   display: block;
 }
 
-.mobile-menu-active .mobile-menu nav{
+.mobile-menu-active .mobile-menu nav {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -167,14 +176,14 @@ body.mobile-menu-active{
   min-height: 100vh;
 }
 
-.mobile-menu nav li{
+.mobile-menu nav li {
   list-style: none;
   margin: 0;
   padding: 0;
   text-align: center;
 }
 
-.mobile-menu nav li a{
+.mobile-menu nav li a {
   color: white;
   text-align: center;
   display: inline-block;
@@ -188,20 +197,20 @@ body.mobile-menu-active{
   text-decoration: none;
 }
 
-footer.footer{
+footer.footer {
   background-color: #222;
   color: white;
   padding: 20px;
 }
 
-.footer-grid{
+.footer-grid {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
 
-.footer-grid .copyright{
+.footer-grid .copyright {
   text-align: right;
 }
 
@@ -209,7 +218,7 @@ footer.footer{
    Helper classes
    ========================================================================== */
 
-.wrap{
+.wrap {
   margin: 0 auto;
   width: 100%;
   max-width: 1200px;
@@ -233,42 +242,25 @@ footer.footer{
 	visibility: hidden;
 }
 
-/*
- * Clearfix: contain floats
- *
- * The use of `table` rather than `block` is only necessary if using
- * `::before` to contain the top-margins of child elements.
- */
-
-.clearfix::before,
-.clearfix::after {
-	content: "";
-	display: table;
-}
-
-.clearfix::after {
-	clear: both;
-}
-
 /* ==========================================================================
-   Media Queries 
+   Media Queries
    ========================================================================== */
 
 @media only screen and (min-width: 720px) {
 
-  .grid{
+  .grid {
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
     margin: 0 -20px;
   }
   
-  .grid .col-4{
+  .grid .col-4 {
     width: 33.33333%;
     padding: 20px;
   }
   
-  .grid .col-6{
+  .grid .col-6 {
     width: 50%;
     padding: 20px;
   }
@@ -283,22 +275,22 @@ footer.footer{
     padding: 0;
   }
 
-  .sticky-header .logo{
+  .sticky-header .logo {
     margin-left: 20px;
   }
 
-  .sticky-header ul.nav{
+  .sticky-header ul.nav {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
   }
 
-  .hamburger{
+  .hamburger {
     display: none;
   }
 
-  .mobile-menu-active .mobile-menu{
+  .mobile-menu-active .mobile-menu {
     display: none;
   }
 
